@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  font-family: "DM Sans", sans-serif;
+}
+html body img {
+  width: 100%;
+}
+html body a {
+  color: inherit;
+}
+html body #about {
+  background-color: #333;
+}
+html body section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+html body section #start-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+html body section .container,
+html body section .about-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+html body section .container h3,
+html body section .about-container h3 {
+  width: 100%;
+  text-align: center;
+}
+html body section .container .grid,
+html body section .about-container .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+html body section .container .grid div,
+html body section .about-container .grid div {
+  width: 100%;
+  padding: 1rem 0;
+  text-transform: lowercase;
+}
+html body section .container .grid div img,
+html body section .about-container .grid div img {
+  width: 100%;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+}
+html body section .container .grid div img:hover,
+html body section .about-container .grid div img:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+html body section .container .grid div h5,
+html body section .about-container .grid div h5 {
+  font-size: 1.5rem;
+}
+html body section .container .grid div p,
+html body section .about-container .grid div p {
+  font-size: 1rem;
+}
+html body section .container .about-text,
+html body section .about-container .about-text {
+  background-color: #f7f7f7;
+  padding: 1rem;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+html body section .container .about-img,
+html body section .about-container .about-img {
+  width: 80%;
+}
+html body section i {
+  color: #333;
+  font-size: 1.5rem;
+}
+html body section .about-container {
+  position: relative;
+  justify-content: flex-end;
+}
+html body section .icons {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+html body section .icons i {
+  color: #f7f7f7;
+  font-size: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */

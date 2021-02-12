@@ -1,0 +1,117 @@
+@import "./mixins";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  body {
+    font-family: "DM Sans", sans-serif;
+
+    img {
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    #about {
+      background-color: #333;
+    }
+
+    section {
+      min-height: 100vh;
+      @include center();
+      flex-direction: column;
+      padding: 2rem 0;
+
+      #start-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .container,
+      .about-container {
+        width: 90%;
+        @include center();
+        flex-grow: 1;
+
+        h3 {
+          width: 100%;
+          text-align: center;
+        }
+        .grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+
+          div {
+            width: 100%;
+            padding: 1rem 0;
+            text-transform: lowercase;
+            
+
+            img {
+                width: 100%;
+              transition: 0.2s ease;
+              -webkit-transition: 0.2s ease;
+              -moz-transition: 0.2s ease;
+              -ms-transition: 0.2s ease;
+              -o-transition: 0.2s ease;
+              &:hover {
+                  filter: grayscale(100%);
+                  -webkit-filter: grayscale(100%);
+                 
+}
+            }
+
+            h5 {
+              font-size: 1.5rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+        .about-text {
+          background-color: #f7f7f7;
+          padding: 1rem;
+          position: absolute;
+          top: 10%;
+          right: 10%;
+        }
+
+        .about-img {
+          width: 80%;
+        }
+      }
+      i {
+        color: #333;
+        font-size: 1.5rem;
+      }
+
+      .about-container {
+        position: relative;
+        justify-content: flex-end;
+      }
+
+      .icons {
+        width: 40%;
+        @include center();
+        justify-content: space-between;
+        i {
+          color: #f7f7f7;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
