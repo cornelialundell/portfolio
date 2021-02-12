@@ -100,9 +100,23 @@ html body section .about-container .about-text {
   top: 10%;
   right: 10%;
 }
+@media screen and (min-width: 800px) {
+  html body section .container .about-text,
+html body section .about-container .about-text {
+    position: static;
+    width: 70%;
+  }
+}
 html body section .container .about-img,
 html body section .about-container .about-img {
   width: 80%;
+}
+@media screen and (min-width: 800px) {
+  html body section .container .about-img,
+html body section .about-container .about-img {
+    position: static;
+    width: 30%;
+  }
 }
 html body section i {
   color: #333;
@@ -111,6 +125,15 @@ html body section i {
 html body section .about-container {
   position: relative;
   justify-content: flex-end;
+}
+@media screen and (min-width: 800px) {
+  html body section .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60%;
+  }
 }
 html body section .icons {
   width: 40%;

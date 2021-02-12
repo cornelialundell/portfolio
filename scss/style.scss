@@ -95,10 +95,19 @@ html {
           position: absolute;
           top: 10%;
           right: 10%;
+
+          @include responsive(bigscreen) {
+              position: static;
+            width: 70%;
+        }
         }
 
         .about-img {
           width: 80%;
+          @include responsive(bigscreen) {
+            position: static;
+            width: 30%;
+        }
         }
       }
       i {
@@ -109,6 +118,11 @@ html {
       .about-container {
         position: relative;
         justify-content: flex-end;
+
+        @include responsive(bigscreen) {
+            @include center();
+            width: 60%;
+        }
       }
 
       .icons {
