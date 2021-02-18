@@ -1,3 +1,160 @@
+nav {
+  z-index: 1;
+}
+
+.reveal {
+  opacity: 0.85;
+  display: block;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.hamburger-shell {
+  margin: 0;
+  position: fixed;
+  overflow: hidden;
+  width: 70px;
+  height: 100px;
+  overflow: auto;
+  left: calc(100% - 100px);
+  top: 20px;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  border: none;
+  z-index: 1;
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+}
+
+.top, .middle {
+  position: absolute;
+  width: 62px;
+  height: 10px;
+  background-color: black;
+  transition: all 350ms ease-in-out;
+  top: 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.middle {
+  top: 40px;
+}
+
+#menu {
+  position: fixed;
+  left: calc(100% - 292px);
+  top: 10px;
+  color: black;
+  display: none;
+  margin: 120px 30px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #333;
+  padding: 24px;
+  width: 200px;
+  text-align: right;
+}
+
+#menu li {
+  text-decoration: none !important;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid black;
+  list-style: none;
+  color: #555;
+  transition: all 150ms ease;
+}
+
+#menu li:hover {
+  color: #00abff;
+  padding-right: 3px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-open .top {
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  top: 30px;
+  background-color: black;
+  height: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.menu-open .middle {
+  transform: rotate(-225deg);
+  -webkit-transform: rotate(-225deg);
+  top: 30px;
+  background-color: black;
+  height: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.menu-name {
+  font-family: Verdana;
+  font-weight: 900;
+  color: black;
+  font-size: 19.5px;
+  text-decoration: none;
+  position: absolute;
+  top: 56px;
+  left: -1px;
+  transition: all 350ms;
+}
+
+.menu-open .menu-name {
+  top: 64px;
+}
+
+#graphic-design {
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+#graphic-design .go-back {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+#graphic-design .go-back i {
+  padding-right: 1rem;
+}
+#graphic-design .graphic-container {
+  width: 50%;
+}
+#graphic-design .graphic-container .card {
+  padding-top: 4rem;
+}
+#graphic-design .graphic-container .card p {
+  padding-top: 1rem;
+  color: #5e5e5e;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,14 +169,24 @@ html body {
 }
 html body img {
   width: 100%;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 html body a {
   color: inherit;
 }
+html body h5 {
+  font-size: 1.5rem;
+}
 html body #about {
+  background: linear-gradient(#595959, #333) !important;
   background-color: #333;
 }
 html body section {
+  background: linear-gradient(#f7f7f7, #ccc);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -43,6 +210,10 @@ html body section .about-container {
   flex-wrap: wrap;
   flex-grow: 1;
 }
+html body section .container h1,
+html body section .about-container h1 {
+  margin: 0 auto;
+}
 html body section .container h3,
 html body section .about-container h3 {
   width: 100%;
@@ -60,8 +231,22 @@ html body section .about-container .grid div {
   padding: 1rem 0;
   text-transform: lowercase;
 }
-html body section .container .grid div img,
-html body section .about-container .grid div img {
+@media screen and (min-width: 800px) {
+  html body section .container .grid div,
+html body section .about-container .grid div {
+    width: 30%;
+  }
+}
+html body section .container .grid div .visit-container,
+html body section .about-container .grid div .visit-container {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+html body section .container .grid div .visit-container img,
+html body section .about-container .grid div .visit-container img {
   width: 100%;
   transition: 0.2s ease;
   -webkit-transition: 0.2s ease;
@@ -69,40 +254,65 @@ html body section .about-container .grid div img {
   -ms-transition: 0.2s ease;
   -o-transition: 0.2s ease;
 }
-html body section .container .grid div img:hover,
-html body section .about-container .grid div img:hover {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
+html body section .container .grid div .visit-container img:hover,
+html body section .about-container .grid div .visit-container img:hover {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
-html body section .container .grid div h5,
-html body section .about-container .grid div h5 {
-  font-size: 1.5rem;
+html body section .container .grid div .visit-container .visit,
+html body section .about-container .grid div .visit-container .visit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  pointer-events: none;
 }
-html body section .container .grid div p,
-html body section .about-container .grid div p {
+html body section .container .grid div .visit-container p,
+html body section .about-container .grid div .visit-container p {
   font-size: 1rem;
 }
 html body section .container .about-text,
 html body section .about-container .about-text {
   background-color: #f7f7f7;
   padding: 1rem;
-  position: absolute;
-  top: 10%;
-  right: 10%;
+}
+@media screen and (min-width: 800px) {
+  html body section .container .about-text,
+html body section .about-container .about-text {
+    position: static;
+    width: 70%;
+  }
 }
 html body section .container .about-img,
 html body section .about-container .about-img {
   width: 80%;
+}
+@media screen and (min-width: 800px) {
+  html body section .container .about-img,
+html body section .about-container .about-img {
+    position: static;
+    width: 30%;
+  }
 }
 html body section i {
   color: #333;
   font-size: 1.5rem;
 }
 html body section .about-container {
-  position: relative;
-  justify-content: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+}
+@media screen and (min-width: 800px) {
+  html body section .about-container {
+    width: 60%;
+  }
 }
 html body section .icons {
+  padding-top: 2rem;
   width: 40%;
   display: flex;
   justify-content: center;
