@@ -59,4 +59,16 @@ $(function () {
     a += se;
     mailto.href = `mailto:${a}`;
   });
+	
+	$(window).bind('scroll', function() {
+    if($(window).scrollTop() >= $('#about').offset().top - 50) {
+      $('.top').css("background-color", "#f7f7f7")
+      $('.middle').css("background-color", "#f7f7f7")
+      $('.menu-name').css("color", "#f7f7f7")
+    } else {
+      $('.top').css("background-color", "#333")
+      $('.middle').css("background-color", "#333")
+      $('.menu-name').css("color", "#333")
+    }
+});
 });
