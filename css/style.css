@@ -22,7 +22,7 @@ nav {
   padding: 0;
   background: transparent;
   border: none;
-  z-index: 1;
+  z-index: 15;
   transform: scale(0.5);
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
@@ -55,34 +55,30 @@ nav {
 
 #menu {
   position: fixed;
-  left: calc(100% - 292px);
-  top: 10px;
-  color: black;
+  z-index: 10;
   display: none;
-  margin: 120px 30px;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-weight: 100;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #333;
-  padding: 24px;
-  width: 200px;
-  text-align: right;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  padding: 5rem 0rem 5rem 2rem;
+  background-color: #f1c40f;
+  color: white;
 }
 
 #menu li {
   text-decoration: none !important;
   padding-bottom: 10px;
-  margin-bottom: 12px;
-  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+  border-bottom: 1px solid white;
+  width: 100%;
   list-style: none;
-  color: #555;
+  font-size: 2rem;
   transition: all 150ms ease;
 }
 
 #menu li:hover {
-  color: #00abff;
+  color: black;
   padding-right: 3px;
 }
 
@@ -289,6 +285,7 @@ html body section .container .about-text,
 html body section .about-container .about-text {
   background-color: #f7f7f7;
   padding: 1rem;
+  z-index: 1;
 }
 @media screen and (min-width: 800px) {
   html body section .container .about-text,
@@ -299,7 +296,13 @@ html body section .about-container .about-text {
 }
 html body section .container .about-img,
 html body section .about-container .about-img {
-  width: 80%;
+  width: 50%;
+  margin-bottom: -10px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 @media screen and (min-width: 800px) {
   html body section .container .about-img,
@@ -336,6 +339,17 @@ html body section .icons {
 html body section .icons i {
   color: #f7f7f7;
   font-size: 3rem;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+@media screen and (min-width: 800px) {
+  html body section .icons i:hover {
+    color: #f1c40f;
+    margin-top: -10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
