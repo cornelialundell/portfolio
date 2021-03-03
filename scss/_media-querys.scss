@@ -1,5 +1,0 @@
-@mixin responsive($breakpoint) {
-    @if $breakpoint == bigscreen {
-        @media screen and (min-width: 800px) { @content };
-    }
-}
